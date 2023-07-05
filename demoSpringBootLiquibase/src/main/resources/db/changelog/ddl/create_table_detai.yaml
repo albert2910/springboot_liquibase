@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 10
+      author: admin
+      changes:
+        - createTable:
+            tableName: TBLDeTai
+            columns:
+              - column:
+                  name: Madt
+                  type: varchar(50)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: Tendt
+                  type: varchar(30)
+              - column:
+                  name: Kinhphi
+                  type: BIGINT
+              - column:
+                  name: Noithuctap
+                  type: varchar(30)
+

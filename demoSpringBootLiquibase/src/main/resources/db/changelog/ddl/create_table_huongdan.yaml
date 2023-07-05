@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 13
+      author: admin
+      changes:
+        - createTable:
+            tableName: TBLHuongDan
+            columns:
+              - column:
+                  name: Masv
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: Madt
+                  type: varchar(10)
+                  constraints:
+                    foreignKeyName: TBLHuongDan_Madt
+                    references: TBLDeTai(Madt)
+              - column:
+                  name: Magv
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: TBLHuongDan_Magv
+                    references: TBLGiangVien(Madt)
+              - column:
+                  name: KetQua
+                  type: decimal(5,2)
+
